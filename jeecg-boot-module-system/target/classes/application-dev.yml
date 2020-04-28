@@ -101,11 +101,11 @@ spring:
           password: abc123...
           driver-class-name: com.mysql.jdbc.Driver
           # 多数据源配置
-        ydkj-mall:
-          url: jdbc:mysql://localhost:3306/ydkj_mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
-          username: root
-          password: abc123...
-          driver-class-name: com.mysql.jdbc.Driver
+#        ydkj-mall:
+#          url: jdbc:mysql://localhost:3306/ydkj_mall?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
+#          username: root
+#          password: abc123...
+#          driver-class-name: com.mysql.jdbc.Driver
   #redis 配置
   redis:
     database: 0

@@ -1,0 +1,12 @@
+org/mall/base/modules/product/controller/YdkjMallStoreProductController.class
+org/mall/base/BetaMallBaseApplication.class
+org/mall/base/modules/product/mapper/YdkjMallStoreProductMapper.class
+org/mall/base/modules/product/service/IYdkjMallStoreCategoryService.class
+org/mall/base/modules/product/entity/YdkjMallStoreCategory.class
+org/mall/base/modules/product/service/impl/YdkjMallStoreCategoryServiceImpl.class
+org/mall/base/modules/product/mapper/YdkjMallStoreCategoryMapper.class
+org/mall/base/modules/product/service/IYdkjMallStoreProductService.class
+org/mall/base/config/MybatisPlusConfig.class
+org/mall/base/modules/product/controller/YdkjMallStoreCategoryController.class
+org/mall/base/modules/product/entity/YdkjMallStoreProduct.class
+org/mall/base/modules/product/service/impl/YdkjMallStoreProductServiceImpl.class
