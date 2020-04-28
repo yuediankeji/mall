@@ -29,7 +29,7 @@ import org.jeecg.common.aspect.annotation.AutoLog;
  */
 @Api(tags="商品类别")
 @RestController
-@RequestMapping("/org.jeecg.modules/ydkjMallStoreCategory")
+@RequestMapping("/org.mall.base.modules/ydkjMallStoreCategory")
 @Slf4j
 public class YdkjMallStoreCategoryController extends JeecgController<YdkjMallStoreCategory, IYdkjMallStoreCategoryService> {
 	@Autowired
