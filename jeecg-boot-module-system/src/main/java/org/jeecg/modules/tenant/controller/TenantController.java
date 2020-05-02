@@ -44,7 +44,7 @@ import org.jeecg.common.aspect.annotation.AutoLog;
  */
 @Api(tags="租户表")
 @RestController
-@RequestMapping("/org.jeecg.modules/tenant")
+@RequestMapping("/tenant")
 @Slf4j
 public class TenantController extends JeecgController<Tenant, ITenantService> {
 	@Autowired

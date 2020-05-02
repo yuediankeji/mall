@@ -99,5 +99,9 @@ public class LoginUser {
 	 * 管理部门ids
 	 */
 	private String departIds;
+	/**
+	 * 租户id
+	 */
+	private String TenantId;
 
 }

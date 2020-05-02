@@ -1,6 +1,6 @@
-package org.mall.base.modules.product.service;
+package org.mall.modules.product.service;
 
-import org.mall.base.modules.product.entity.YdkjMallStoreCategory;
+import org.mall.modules.product.entity.YdkjMallStoreCategory;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

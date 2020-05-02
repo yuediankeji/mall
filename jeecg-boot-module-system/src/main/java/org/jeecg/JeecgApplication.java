@@ -18,7 +18,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Slf4j
 @EnableSwagger2
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"org.jeecg","org.mall"})
 public class JeecgApplication {
 
   public static void main(String[] args) throws UnknownHostException {

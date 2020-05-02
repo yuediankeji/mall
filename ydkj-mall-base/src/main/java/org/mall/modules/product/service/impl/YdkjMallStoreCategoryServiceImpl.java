@@ -1,8 +1,8 @@
-package org.mall.base.modules.product.service.impl;
+package org.mall.modules.product.service.impl;
 
-import org.mall.base.modules.product.entity.YdkjMallStoreCategory;
-import org.mall.base.modules.product.mapper.YdkjMallStoreCategoryMapper;
-import org.mall.base.modules.product.service.IYdkjMallStoreCategoryService;
+import org.mall.modules.product.entity.YdkjMallStoreCategory;
+import org.mall.modules.product.mapper.YdkjMallStoreCategoryMapper;
+import org.mall.modules.product.service.IYdkjMallStoreCategoryService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

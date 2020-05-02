@@ -1,12 +1,13 @@
-package org.mall.base.modules.product.controller;
+package org.mall.modules.product.controller;
 
 import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.jeecg.common.api.vo.Result;
+import org.jeecg.common.aspect.annotation.PermissionData;
 import org.jeecg.common.system.query.QueryGenerator;
-import org.mall.base.modules.product.entity.YdkjMallStoreCategory;
-import org.mall.base.modules.product.service.IYdkjMallStoreCategoryService;
+import org.mall.modules.product.entity.YdkjMallStoreCategory;
+import org.mall.modules.product.service.IYdkjMallStoreCategoryService;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -29,7 +30,7 @@ import org.jeecg.common.aspect.annotation.AutoLog;
  */
 @Api(tags="商品类别")
 @RestController
-@RequestMapping("/org.mall.base.modules/ydkjMallStoreCategory")
+@RequestMapping("/mall/ydkjMallStoreCategory")
 @Slf4j
 public class YdkjMallStoreCategoryController extends JeecgController<YdkjMallStoreCategory, IYdkjMallStoreCategoryService> {
 	@Autowired

@@ -7,3 +7,5 @@ swagger:
     enable: false
     username: jeecg
     password: jeecg1314
+tenant:
+  tentTables: "ydkj_mall_store_category,ydkj_mall_store_product"

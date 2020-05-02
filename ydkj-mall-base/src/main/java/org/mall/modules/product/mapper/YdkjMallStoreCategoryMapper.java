@@ -1,6 +1,6 @@
-package org.mall.base.modules.product.mapper;
+package org.mall.modules.product.mapper;
 
-import org.mall.base.modules.product.entity.YdkjMallStoreCategory;
+import org.mall.modules.product.entity.YdkjMallStoreCategory;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

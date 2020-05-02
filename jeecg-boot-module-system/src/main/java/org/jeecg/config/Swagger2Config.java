@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.google.common.base.Function;
+import com.google.common.base.Optional;
+import com.google.common.base.Predicate;
 import org.jeecg.modules.shiro.vo.DefContants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 
 import io.swagger.annotations.ApiOperation;
+import springfox.documentation.RequestHandler;
 import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.Parameter;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +40,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwaggerBootstrapUI
 public class Swagger2Config implements WebMvcConfigurer {
 
+	private static final String splitor = ";";
 	/**
 	 *
 	 * 显示swagger-ui.html文档展示页，还必须注入swagger资源：
@@ -60,7 +65,7 @@ public class Swagger2Config implements WebMvcConfigurer {
 				.apiInfo(apiInfo())
 				.select()
 				//此包路径下的类，才生成接口文档
-				.apis(RequestHandlerSelectors.basePackage("org.jeecg.modules"))
+				.apis(basePackage("org.jeecg.modules"+splitor+"org.mall.modules"))
 				//加了ApiOperation注解的类，才生成接口文档
 	            .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
 				.paths(PathSelectors.any())
@@ -69,6 +74,27 @@ public class Swagger2Config implements WebMvcConfigurer {
 				//.globalOperationParameters(setHeaderToken());
 	}
 
+	public static Predicate<RequestHandler> basePackage(final String basePackage) {
+		return input -> declaringClass(input).transform(handlerPackage(basePackage)).or(true);
+	}
+
+	private static Function<Class<?>, Boolean> handlerPackage(final String basePackage)     {
+		return input -> {
+			// 循环判断匹配
+			for (String strPackage : basePackage.split(splitor)) {
+				boolean isMatch = input.getPackage().getName().startsWith(strPackage);
+				if (isMatch) {
+					return true;
+				}
+			}
+			return false;
+		};
+	}
+
+
+	private static Optional<? extends Class<?>> declaringClass(RequestHandler input) {
+		return Optional.fromNullable(input.declaringClass());
+	}
 	/***
 	 * oauth2配置
 	 * 需要增加swagger授权回调地址

@@ -1,4 +1,4 @@
-package org.mall.base.modules.product.entity;
+package org.mall.modules.product.entity;
 
 import java.io.Serializable;
 
