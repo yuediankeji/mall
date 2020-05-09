@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mall.modules.supplier.mapper.YdkjSupplierMapper">
+    <select id="getList" resultType="org.mall.modules.supplier.entity.YdkjSupplier" >
+        select t.*,u.username,u.realname from ydkj_supplier t LEFT JOIN sys_user u on t.user_id = u.id ${ew.customSqlSegment}
+    </select>
+    <select id="getEntity" parameterType="Map" >
+        select a.id as id,a.tenant as tenant,a.company as company,a.company_addess as companyAddess,a.company_link as companyLink,b.username as userName
+        from ydkj_supplier a left join sys_user b on a.user_id = b.id where a.id = #{id}
+    </select>
+</mapper>

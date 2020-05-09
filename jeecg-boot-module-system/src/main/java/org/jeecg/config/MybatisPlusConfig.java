@@ -38,7 +38,7 @@ public class MybatisPlusConfig {
     @Value("${tenant.tentTables}")
     private String tentTables;
     /**
-         *  分页插件
+     *  分页插件
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
@@ -113,6 +113,6 @@ public class MybatisPlusConfig {
     public PerformanceInterceptor performanceInterceptor() {
         return new PerformanceInterceptor();
     }
-    
-   
+
+
 }
